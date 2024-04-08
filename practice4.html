@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Avila: Practice 4</title>	
+</head>
+
+<body>
+	<h1>Practice 4<br>
+	PHP Multiplication Table</h1>
+
+
+	<input id="row" placeholder="Enter Number of Rows"/>
+	<input type="submit" value="multiply" onclick="createTable()"/>
+
+	<br><br>
+
+	<div id="table_container">
+	</div>
+
+	<script>
+
+		function createTable()
+		{
+			
+			var rows = document.getElementById("row").value;
+			var j=1;
+			var output = "<table border='1' cellspacing='0' cellpadding='5'>";
+			
+			for(i=1;i<=rows;i++) 
+			{
+				output = output + "<tr>";
+				while(j<=rows) 
+				{
+					var cellValue = i*j;
+					if(cellValue%2==0 && cellValue%3==0) {
+						output = output + "<td>" + i*j + "</font></td>"; 
+					}
+					else if(cellValue%2==0) {
+						output = output + "<td>" + i*j + "</font></td>"; 
+					}
+					else if(cellValue%3==0) {
+						output = output + "<td>" + i*j + "</font></td>"; 
+					} 
+					else {
+						output = output + "<td> "+ i*j + "</td>";
+					}
+					j = j+1; 
+				}
+				output = output + "</tr>";
+				j = 1;
+			}
+			output = output + "</table>";
+			var tableContainer = document.getElementById("table_container");
+			tableContainer.innerHTML = output;
+		}
+		
+	</script>
+
+</body>
+
+</html>

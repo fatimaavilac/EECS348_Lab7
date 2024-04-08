@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Avila: Practice 3</title>
+		<style>
+			body { text-align: center; }
+		</style>
+	</head>
+
+	<body>
+		<h1>Practice 3<br>
+		JavaScript Password Verification</h1>
+		
+		<br>
+		Enter Password:
+		<input type="text" id="pass1">
+		<br><br>
+		Confirm Password:
+		<input type="text" id="pass2">
+		<br><br>
+		<button onclick="validate()">Validate Passwords</button>
+	</body>
+
+	<script>
+		function validate() {
+			var pass1 = document.getElementById("pass1").value;
+			var pass2 = document.getElementById("pass2").value;
+
+			if (pass1 == "" || pass2 == "") {
+				alert("Error: Password fields are empty.");
+			} else if (pass1 == pass2) {
+				alert("Passwords match!");
+			} else {
+				alert("Passwords do not match.");
+			}
+		}
+	</script>
+		
+
+</html>

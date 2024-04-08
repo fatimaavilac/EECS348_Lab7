@@ -1,0 +1,21 @@
+body {
+	background-image: url("https://images.squarespace-cdn.com/content/v1/5e949a92e17d55230cd1d44f/ca7a4e4c-f254-42b4-a69e-3925af5547dd/Autumn+Gradients1x1.png");
+	background-color: lightblue;
+	
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+}
+
+p {
+	color: white;
+	font-family: verdana;
+	font-size: 20px;
+}
+
